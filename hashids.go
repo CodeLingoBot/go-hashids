@@ -260,7 +260,7 @@ func (h *HashID) Decode(hash string) []int {
 	return result
 }
 
-// Decode unhashes the string passed to an array of int.
+// DecodeWithError decodes unhashes the string passed to an array of int.
 // It is symmetric with Encode if the Alphabet and Salt are the same ones which were used to hash.
 // MinLength has no effect on Decode.
 func (h *HashID) DecodeWithError(hash string) ([]int, error) {
@@ -287,7 +287,7 @@ func (h *HashID) DecodeInt64(hash string) []int64 {
 	return result
 }
 
-// DecodeInt64 unhashes the string passed to an array of int64.
+// DecodeInt64WithError unhashes the string passed to an array of int64.
 // It is symmetric with EncodeInt64 if the Alphabet and Salt are the same ones which were used to hash.
 // MinLength has no effect on DecodeInt64.
 func (h *HashID) DecodeInt64WithError(hash string) ([]int64, error) {
